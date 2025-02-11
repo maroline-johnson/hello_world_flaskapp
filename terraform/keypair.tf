@@ -12,6 +12,7 @@ resource "local_file" "pvt_key" {
   content  = tls_private_key.rsa-key.private_key_pem
   filename = "/Users/maroline/.ssh/id_rsa"
 }
+
 resource "local_file" "pub_key" {
   content  = tls_private_key.rsa-key.public_key_openssh
   filename = "/Users/maroline/.ssh/id_rsa.pub"
